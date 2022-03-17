@@ -45,11 +45,14 @@ public class Q30 {
   ) {
     for (int i = 0; i < num_pessoas; i++) {
       Q30 pessoa = new Q30();
-      System.out.print("CPF: ");
-      pessoa.cpf = ler.next();
 
+      do {
+        System.out.print("CPF: ");
+        pessoa.cpf = ler.next();
+      } while (!ValidarCPF(pessoa.cpf));
+      ler.nextLine();
       System.out.print("Nome: ");
-      pessoa.nome = ler.next();
+      pessoa.nome = ler.nextLine();
       System.out.print("Idade: ");
       pessoa.idade = ler.nextInt();
       System.out.print("Sexo: ");
@@ -64,6 +67,17 @@ public class Q30 {
       System.out.println("\n\n");
     }
     return pessoasList;
+  }
+
+  public static boolean ValidarCPF(String cpf) {
+    cpf = cpf.replaceAll("[^0-9]", "");
+
+    if (cpf.length() != 11) {
+      return false;
+    } else if (cpf.matches("[0-9]*")) {
+      return true;
+    }
+    return false;
   }
 
   public Q30(
