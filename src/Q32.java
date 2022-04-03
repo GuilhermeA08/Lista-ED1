@@ -1,6 +1,3 @@
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Q32 {
@@ -24,8 +21,4 @@ public class Q32 {
     }
     System.out.println();
   }
-
-  public static void contar() {}
-
-  public static void exibir() {}
 }
