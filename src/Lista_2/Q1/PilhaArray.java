@@ -25,6 +25,7 @@ public class PilhaArray<T> implements InterfacePilhaArray<T> {
   }
 
   @Override
+  @SuppressWarnings("unchecked")
   public T pop() throws MyException {
     Object object;
     if (!this.isEmpty()) {
@@ -37,6 +38,7 @@ public class PilhaArray<T> implements InterfacePilhaArray<T> {
   }
 
   @Override
+  @SuppressWarnings("unchecked")
   public T peek() throws MyException {
     if (!this.isEmpty()) {
       return (T) objects[this.top];
